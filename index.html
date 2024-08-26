@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Hunt - Game Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-shapes"></div>
+
+    <div id="nav-container"></div>
+
+    <main>
+        <img src="images/banner.png" alt="Alex Hunt - Game Developer" class="hero">
+
+        <section id="projects" class="section">
+            <div class="content-box">
+                <h2>Projects</h2>
+                <div id="projects-container" class="projects-container">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="content-box">
+                <h2>About Me</h2>
+                <p>Hi, I'm Alex Hunt. I'm a passionate developer specializing in 3d modeling. My skills also include pixel art/animation and I have experience with both Unity and Unreal Engine. I'm always looking for more opportunities to create memorable video games.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="content-box">
+                <h2>Skills</h2>
+                <div class="skills-container">
+                    <div class="skill-item">Unity</div>
+                    <div class="skill-item">Unreal Engine</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">Pixel Animation</div>
+                    <div class="skill-item">3D Modeling</div>
+                    <div class="skill-item">Game Design</div>
+                    <div class="skill-item">Level Design</div>
+                    <div class="skill-item">Version Control (Git)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="content-box">
+                <h2>Contact</h2>
+                <p>Feel free to reach out to me at <a href="mailto:alexhuntatl@gmail.com">alexhuntatl@gmail.com</a> or call me at <a href="tel:678-480-2475">678-480-2475</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alex Hunt. All rights reserved.</p>
+    </footer>
+
+    <script src="projects.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectsContainer = document.getElementById('projects-container');
+            projects.forEach(project => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card';
+                projectCard.innerHTML = `
+                    <img src="${project.thumbnailUrl}" alt="${project.name}">
+                    <div class="project-card-content">
+                        <h3>${project.name}</h3>
+                        <p>${project.description}</p>
+                    </div>
+                `;
+                projectCard.addEventListener('click', function() {
+                    window.location.href = `project.html?id=${project.id}`;
+                });
+                projectsContainer.appendChild(projectCard);
+            });
+        });
+    </script>
+</body>
+</html>

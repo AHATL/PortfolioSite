@@ -1,0 +1,32 @@
+const projects = [
+    {
+      id: "built-to-scale",
+      name: "Built To Scale",
+      subtitle: "Game Maker's Toolkit Jam Project",
+      thumbnailUrl: "images/proj_thumb3.png",
+      description: "A project for the Game Maker's toolkit jam.",
+      fullDescription: "Detailed description of the Built To Scale project...",
+      skills: ["Unity", "C#", "Game Design"],
+      images: ["images/proj_thumb3.png"],
+    },
+    {
+      id: "fantasy-treehouse",
+      name: "Fantasy Treehouse",
+      subtitle: "3D Modeling Project",
+      thumbnailUrl: "images/proj_thumb2.png",
+      description: "An interior modeling project where I modeled a small home in the trees.",
+      fullDescription: "Detailed description of the Fantasy Treehouse project...",
+      skills: ["3D Modeling", "Interior Design"],
+      images: ["images/proj_thumb2.png"],
+    },
+    {
+      id: "techwear-agent",
+      name: "Techwear Agent",
+      subtitle: "Character Modeling Project",
+      thumbnailUrl: "images/proj_thumb1.png",
+      description: "A character modeling project where I modeled a character from concept art I created with a techwear/cyberpunk aesthetic in mind.",
+      fullDescription: "Detailed description of the Techwear Agent project...",
+      skills: ["3D Modeling", "Character Design", "Concept Art"],
+      images: ["images/proj_thumb1.png",],
+    },
+  ];
